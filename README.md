@@ -3,10 +3,10 @@
 ## Punto 20: Recompile y ejecute la aplicación. Abra en su navegador en la página del formulario, y rectifique que la página hecha anteriormente sea mostrada. Ingrese los datos y verifique los resultados. Cambie el formulario para que ahora en lugar de POST, use el método GET . Qué diferencia observa?
 >
 >   ### Post
->>   ![](post.JPEG)
+>>   ![](post.jpeg)
 >   
 >   ### Get
->>   ![](get.JPEG)
+>>   ![](get.jpeg)
 >
 >   ###Diferencia
 >>   Encontramos la diferencia en que con Post en la URL no nos muestra el parametro Id, mientras que al usar Get si nos muestra el parametro en la URL
