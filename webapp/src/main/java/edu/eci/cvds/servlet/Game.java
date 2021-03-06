@@ -1,8 +1,5 @@
 package edu.eci.cvds.servlet;
 
-import com.sun.tools.javac.util.List;
-
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.util.ArrayList;
@@ -16,14 +13,19 @@ public class Game {
     public int premio;
     public boolean estado;
     public Game(){
-        numero=(int)Math.floor(Math.random()*(100-0+1)+0);
+        numero=(int)Math.floor(Math.random()*(20-0+1)+0);
         intento=0;
         puestos=new ArrayList<Integer>();
         premio=100000;
         estado=false;
     }
 
-
+    public String getmuestra(){
+        if (estado){
+            return "display: visible ;";
+        }
+        return "display: none ;";
+    }
     public int getNumero(){
         return numero;
     }
@@ -55,8 +57,11 @@ public class Game {
     }
 
     public String isEstado() {
-        if (estado && intento){
+        if (estado && premio>0){
             return "Ha ganado el juego, su premio es de "+premio;
+        }
+        else if(estado && premio==0){
+            return "Has perdido";
         }
         return "Aun no ha ganado el juego";
     }
@@ -66,15 +71,18 @@ public class Game {
     }
 
     public void guess(int num){
-        System.out.println(num==numero);
+
         if (!estado) {
             setintento();
             setPuestos(num);
-            if (num==numero || premio==0){
+            if (num==numero ){
                 setEstado();
             }
             else {
                 setPremio();
+                if (premio==0){
+                    setEstado();
+                }
             }
         }
     }
