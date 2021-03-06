@@ -1,3 +1,5 @@
+# Ana Maria Salazar Bohorquez
+# Richard Santiago Urrea Garcia
 # PARTE III
 
 ## Punto 20: Recompile y ejecute la aplicación. Abra en su navegador en la página del formulario, y rectifique que la página hecha anteriormente sea mostrada. Ingrese los datos y verifique los resultados. Cambie el formulario para que ahora en lugar de POST, use el método GET . Qué diferencia observa?
